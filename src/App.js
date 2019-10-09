@@ -1,6 +1,11 @@
 import React from "react";
 import "./App.css";
 
+//Import Components
+import Body from './components/Body';
+import Image from './components/Image';
+
+
 function App() {
   return (
     <div className="App">
