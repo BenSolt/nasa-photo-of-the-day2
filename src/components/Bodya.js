@@ -7,12 +7,12 @@ import Image from './Image';
 export default function Bodya() {
     
     const [spaceImage, setSpaceImage] = useState([]);
-    
+    const [changeDate, setChangeDate] = useState([]);
 
 useEffect(() => {
     axios
     //.get('https://api.nasa.gov/DONKI/FLR?startDate=yyyy-MM-dd&endDate=yyyy-MM-dd&api_key=DEMO_KEY')
-    .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
+    .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY${changeDate}`)
     .then(response => {
         const info = response.data;
         console.log('response', info);
@@ -30,7 +30,8 @@ return (
 
         <Image imgg = {spaceImage}/>
         
-
+        <button onClick={()=>setChangeDate('2012-03-14')}>Date</button>
+        
         <h1>{spaceImage.title}</h1>
         <h2>{spaceImage.date}</h2>
         <p>{spaceImage.explanation}</p> 
