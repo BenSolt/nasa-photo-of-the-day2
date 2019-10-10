@@ -2,6 +2,10 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import Image from './Image';
 
+import {
+    Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle, Button
+  } from 'reactstrap';
 
 
 export default function Bodya() {
@@ -12,7 +16,8 @@ export default function Bodya() {
 useEffect(() => {
     axios
     //.get('https://api.nasa.gov/DONKI/FLR?startDate=yyyy-MM-dd&endDate=yyyy-MM-dd&api_key=DEMO_KEY')
-    .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY${changeDate}`)
+
+    .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${changeDate}`)
     .then(response => {
         const info = response.data;
         console.log('response', info);
@@ -24,20 +29,22 @@ return (
     <div className='container'>
 
         
+<Card>
 
 
-    <div className='images'>
+<Image test = {spaceImage}/>
 
-        <Image imgg = {spaceImage}/>
-        
-        <button onClick={()=>setChangeDate('2012-03-14')}>Date</button>
-        
-        <h1>{spaceImage.title}</h1>
-        <h2>{spaceImage.date}</h2>
-        <p>{spaceImage.explanation}</p> 
-        
+       <CardBody>
+       
+          <CardTitle>{spaceImage.title}</CardTitle>
+          <CardSubtitle>{spaceImage.date}</CardSubtitle>
+          <CardText>{spaceImage.explanation}explantionexplantionexplantionexplantionexplantion</CardText>
+          <Button>Button</Button>
+        </CardBody>
 
-    </div>
+     
+
+    </Card>
 
     </div>
 )

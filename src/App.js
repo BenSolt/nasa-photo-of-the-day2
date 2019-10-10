@@ -4,8 +4,9 @@ import "./App.css";
 //Import Components
 import Bodya from './components/Bodya';
 // import Image from './components/Image';
+import Datepicker from './components/Datepicker';
 
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
     <div className="App">
 
     <Bodya/>
-   
+   <Datepicker/>
     
       {/* <p>
         Read through the instructions in the README.md file to build your NASA

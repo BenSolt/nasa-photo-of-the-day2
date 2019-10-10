@@ -5,8 +5,9 @@ import styled from 'styled-components';
 
 //Image Size
 const ImgNasa = styled.img`
-width: 100%
-height: auto;
+width: 50%
+height: 100%;
+
 `;
 
 
@@ -17,7 +18,7 @@ const Image = props => {
 
 
 
-        <ImgNasa alt="Nasa Daily Image" src={props.imgg.hdurl}/>
+        <ImgNasa alt="Nasa Daily Image" src={props.test.hdurl}/>
 
         </div>
     )
