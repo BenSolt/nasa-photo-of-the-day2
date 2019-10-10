@@ -2,9 +2,11 @@ import React from "react";
 import "./App.css";
 
 //Import Components
-import Bodya from './components/Bodya';
+
 // import Image from './components/Image';
-import Datepicker from './components/Datepicker';
+
+//import Datepicker from './components/Datepicker';
+import Nasacard from './components/Nasacard';
 
 // import styled from 'styled-components';
 
@@ -13,8 +15,9 @@ function App() {
   return (
     <div className="App">
 
-    <Bodya/>
-   <Datepicker/>
+   
+    <Nasacard/>
+    
     
       {/* <p>
         Read through the instructions in the README.md file to build your NASA

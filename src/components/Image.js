@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 //Image Size
 const ImgNasa = styled.img`
-width: 50%
+width: 60%
 height: 100%;
 
 `;
