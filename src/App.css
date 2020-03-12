@@ -31,3 +31,31 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* //////////////// */
+
+.container{
+  border: 2px solid green;
+  display: flex;
+  
+}
+
+.Cardbody{
+border: 2px solid black;
+
+
+}
+
+.Input{
+  border: 2px solid red;
+  
+}
+
+.Img{
+  border: 2px solid blue;
+  
+}
+
+
+
